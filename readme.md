@@ -1,8 +1,12 @@
 # SsvJen
 
-This is a simple CLI that generates ssv files with a fixed structure, with random data.
+This is a simple tool that generates ssv files with a fixed structure, with random data.
 
-It is basically a wrapper around [Jen](https://github.com/whitfin/jen), and therefore uses Jen's template syntax which is based on [Tera](https://github.com/Keats/tera). You can see
+It's designed to quickly generate a large amount of random data for testing and benchmarking purposes.
+
+The structure and types of data can be customised.
+
+It is a wrapper around [Jen](https://github.com/whitfin/jen), and uses Jen's template syntax which is based on [Tera](https://github.com/Keats/tera). You can see
 examples of the templating in the examples folder.
 
 To build SsvJen you need to have Rust and Cargo [installed](https://www.rust-lang.org/tools/install).
@@ -16,7 +20,7 @@ cargo build
 You can then run SsvJen like so:
 
 ```
-$ ./ssv_jen -r 1000000 -t /home/akenny/ssv_jen/templates/other.tera -f /home/akenny/ssv_jen/output/output.csv
+$ ./ssv_jen -r 1000000 -t ssv_jen/templates/other.tera -f ssv_jen/output/output.csv
 ```
 The following flags are required:
 
